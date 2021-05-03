@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="foodItem"
+            type="com.example.foodtracker.database.FoodItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/qualityImage"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:qualityImage="@{foodItem}"
+            tools:srcCompat="@drawable/ic_neutral" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/cardview_dark_background"
+            app:date="@{foodItem}"
+            app:layout_constraintStart_toEndOf="@id/qualityImage"
+            app:layout_constraintTop_toTopOf="@id/qualityImage"
+            tools:text="4/1/2020" />
+
+        <TextView
+            android:id="@+id/foodDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            app:foodString="@{foodItem}"
+            app:layout_constraintBottom_toBottomOf="@id/qualityImage"
+            app:layout_constraintStart_toEndOf="@id/qualityImage"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            tools:text="Hamburger" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

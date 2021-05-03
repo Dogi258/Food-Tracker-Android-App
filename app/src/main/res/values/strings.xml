@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Food Tracker</string>
+    <string name="new_food_item_button_text">New Food Item</string>
+    <string name="how_healthy_would_you_say_this_meal_was">How healthy would you say this meal was?</string>
+    <string name="date">Date</string>
+    <string name="food">Food</string>
+    <string name="healthy">Healthy</string>
+    <string name="somewhat_healthy">Somewhat-Healthy</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="log_food">Log Food</string>
+
+</resources>
